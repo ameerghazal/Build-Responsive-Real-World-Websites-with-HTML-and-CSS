@@ -43,6 +43,17 @@
       - Wrapping words in a <i></i> element italizes words. However, this is outdated. Now, we should use the em element, which empasizes text.
       - <em> ... </em> element italizes words.
 
+      More Text Elements: Lists
+      - list of bullet points, ordered lists, etc.
+      - Numbered List: <ol> </ol> this stands for an ordered list. Inside the ol, we need to create an <li> element, which stands for list item.
+      - <li> </li> element refers to a list item.
+      - <ol> </ol> creates a numbered list.
+      - A container of another element is the parent, and the elements inside of the list, for example, are the child elements. 
+      - Bullet list: for this type of list, we use the <ul> </ul> element, which stands for an unorded list. We still need indiviual <li> element for each list item.
+      - <ul> </ul> creates an unordred list.
+      - Lists are very important in html.
+      - Needs to follow a structure.
+
 
 
 */
