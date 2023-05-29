@@ -107,6 +107,9 @@
       - The main idea, though, is to use sematic html to give our elements meanin.
       - This is better for search engine optimatzation. Also, it is better for accessibility. 
       - <aside></aside> element that contains extra seperate info.
+      - <article></article> element can be used for any type of article.
+      - check the resources page of html entity reference.
+      - <button></button> creates a button.
 
 
 
