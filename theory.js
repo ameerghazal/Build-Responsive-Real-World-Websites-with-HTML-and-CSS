@@ -9,7 +9,7 @@
     - Do the edits in the body element.
     - Use the greater than less than symbols: <p>Data and close it with the right.</p>
     
-
+    __________________________________________________________________
 
     SECTION 2: HTML Fundamentals
 
@@ -110,6 +110,10 @@
       - <article></article> element can be used for any type of article.
       - check the resources page of html entity reference.
       - <button></button> creates a button.
+
+    _____________________________________________________________________
+
+      SECTION 3 CSS FUNDAMENTALS
 
 
 
