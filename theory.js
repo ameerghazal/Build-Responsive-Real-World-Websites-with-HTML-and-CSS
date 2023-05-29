@@ -54,6 +54,60 @@
       - Lists are very important in html.
       - Needs to follow a structure.
 
+      Images and Attributes
+      - <img> element is a special element. It does not hold and content, so we do not need a closing tag.
+      - We use an attribute for images. In this case we use the source attribute, which stands for "src"
+      - Instead, use <img src="..." />
+      - Note, if something is imbedded into a folder, vs needs to access that folder. For example, the image was in the starter folder, so the img element tag would be:
+      - Besides the src, there are other attributes. One important one for images is the alt attribute.
+      - alt="" let's the source image have a description.
+      - <img src="starter/post-img.jpg" alt="HTML code on a screen." />
+      - We can also specify the width and height attributes: w
+      - width="" & height =""
+      -ex: <img src="starter/post-img.jpg" alt="HTML code on a screen."
+        width="500" height="200"/>
+      - in the <html tag, specify the language. In this case, <html lang="en"> would be correct. Other languages have other codes. 
+      - In the head tag, specify the character set attribute with:
+          <meta charset="UTF-8" />, since it describes the page.
+
+      
+      Hyperlinks
+      - Every single website on the internet has its own url.
+      - Hyperlinks are used with anchor element; in short, <a></a>
+      - Inside the opening tag, we use the href attribute to set the url.
+      - Inside the content space, we display what would be shown on the screen.
+      - Closing tags are needed.
+      - Also, we can nest elements inside on another. For example, we can open a paragraph element, start it, add in an anchor, then continue and finish the paragraph.
+      ex: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+          MDN Web Docs</a>
+      - To open in a new tab rather than move away, add the target="_blank" attribute after the href.
+      - We can also link another html file. In doing so, we simply specify that html file in our href (e.g. href="index.html"). 
+      - Doing this is cool because we can specify the way back as well.
+      - href property is the real deal to making it a link.
+      - If we do not want the link to point anywhere, use the "#" inside of the href element.
+      ex: <a href="#">Challenges</a>
+
+
+      Structuring out Page
+      - Container elements group elements together.
+      - <nav></nav> elements groups elements together makes it much more helpful. 
+      - <header></header> is the top part of the web document, or a smaller unit. This is also good for telling the browser and grouping elements.
+      - <article></article> is good for grouping atricle information.
+      - So now, our body only has two direct elements: a header and an article.
+      - <footer></footer> is the content that comes at the very end of a page. For example, a copyright tag.
+      - HTML entites can create minor logos, etc.
+      - Use the & symbol followed by the tag name. For example, &copy; creates a copyright symbol.
+
+
+      A note on Semantic HTML
+      - Certain elements have a meaning or a purpose attached to them. Instead of thinking how it looks on the page, we should think of the meaning of it.
+      - For example, using the bold element vs. the strong element. One has meaning, while one does not.
+      - div stands for a box without any meaning. However, we should use a nav instead when wanting to use an acutal navigation.
+      - <div></div> can really be used for anything. Navigation, paragraphs, etc. They take more space, though. 
+      - The main idea, though, is to use sematic html to give our elements meanin.
+      - This is better for search engine optimatzation. Also, it is better for accessibility. 
+      - <aside></aside> element that contains extra seperate info.
+
 
 
 */
