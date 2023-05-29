@@ -115,6 +115,68 @@
 
       SECTION 3 CSS FUNDAMENTALS
 
+      Introduction into CSS
+      - CSS: Cascading Style Sheets
+      - Visual style presentation of the content written in css.
+      - Consists of countless properties that developers use to format the content.
+      - Starts with a selector, followed by declerations (property: value), which all of the make up the decleration block. 
+      - This is all called a CSS Rule.
+      ex: h1 (selector) {font-size:24px (prop, value, decleration)} (block)
+
+
+      Inline, Internal, and External CSS
+      - Inline CSS: writing the CSS inside the element. 
+      ex: <h1 style="color: blue">📘 The Code Magazine</h1>
+        - However, inline styles should usually never be used.
+      - Internal CSS: We go to the <head></head> element and open a <style></style> element. From there, we declare and define what we want to style with normal css. 
+        - However, if we have a lot of CSS code, internal CSS is not practical.
+      - External CSS: putting all the CSS code into its own file.
+        - HTML files and CSS files do not automatically link, we need to link them. 
+        - We can link a stylesheet with the <link> element in the <head></head> 
+        - Use the href attribute to link the stylesheet and define the rel attriubute to tell the browser that it is a stylesheet.
+        ex: <link href="style.css" rel="stylesheet" />
+        - <link ... /> is an element for atttaching css styles mainly.
+
+
+        Styling Text
+        - font-size: ... can be specified with pixels, rem, uv, etc.
+        - font-family: specifes different fonts for text.
+        - text-transform: ... we control the font (e.g. lowercase, uppercase, etc.)
+        - font-style: ... the style of the font (e.g. italic, bold, etc.)
+        - Just because the h1 is the main heading of the page, does not mean it needs to be the biggest one.
+        - By selecting, for example, the p element. We select all the p elements on the page. If there are 14 p elements, we apply the CSS to all 14 (assuming no classes or id's are invloved)
+        - line-height: (number). All it is is the number times the font-size. This changes the spacing between the lines.
+        ex:   line-height: 1.5; (it auto sets to 1)
+        - Inheritance is when the parent has a style and the child does not override it.
+        - text-align: ... (properties) aligns the text in the parent container (e.g. center, will center it)
+        - We do not style the <ol></ol> elements or the <ul></ul> elements. We only style the li elements
+        -* Default font-size is 16px which is 1rem.
+
+        Combining Selectors
+        - We can select multiple selectors to apply the same CSS style by using a comma. 
+        ex: h1, h2, h3 {
+          font-family: sans-serif;
+          color: blue;
+        }
+        - Wrapping stuff into other elements then applying the style will find the parent and be override by the child if applicable.
+        - List selector: combines mutliple selectors(h1, p, etc.)
+        - For example, if we have a footer element, and inside the footer element we have other elements, such as a paragraph, anchor, etc. With proper CSS, we can acess the footer and then style its paragraph
+        - footer p {
+          ....
+        }
+        - This selector will select all paragraphs that are children of the footers.
+        - Descendent selector is what it is called. 
+        - We can use a nested descendent selector by, for example, article header p {}
+
+
+        Class and ID Selectors
+        -
+        -
+        -
+        -
+        -
+        -
+        -
 
 
 */
