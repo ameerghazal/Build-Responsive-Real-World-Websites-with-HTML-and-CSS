@@ -236,12 +236,51 @@
         - mixing multiple elements inside of a parent element make pseduo classes not feasible. 
 
 
+        Styling Hyperlinks
+        - Simply selecting the anchor is not a good practice. It is better specify by pseudo.
+        - a:link {} targets an anchor element with an href. 
+        - text-decoration: none; removes the underline style under links (we can edit this to however we want.)
+        - a:visted {} deals with when links have been seen.
+        - a:hover {} deals with when a mouse hovers over a link.
+        - text-decoration, similar to border, can define the text-decoration-line, text-decoration-style, and text-decoration-color in one go. For example, text-decoration: underline dotted orangered;
+        - a:active {} is a pseudo class that occurs when the link is actually cliked. 
+        - These four states must be defined in this exact order (LVHA): link, visited, hover, active.
+
+        DevTools
+        - some elements have default styles, such as h1.
+        - we can also edit inside the browser.
+        - On the styles tab, by clicking the :hov, we can an element being hovered, visited, etc.
+        - This is great for testing the webpage without messing with the acutal code. 
+        - Anything saved in the browser does not save in the actual code. 
 
 
 
+        CSS Theory #1: Conflicting between Selectors
+        - If there are multiple selectors, which one applies?
+        - First up, decleration marked with !important, but they should only be used with need.
+        - Next up, inline styles have the 2nd highest; however, they should not be used regardless.
+        - Third priority is the ID selector, but if there are multiple, it is the last selector in the code. 
+        - Fourth up, is a class (.) or a pseudo-class selector (:) and if there are multiple, it is the last one of them.
+        - Fifth, is the element selector (p, div, li, etc.) and if multiple, it is the last one in the code. 
+        - Lastly, the universal selector selects everything, but it holds the least weight. 
+        - So for a conflciting property, look above to see which one applies. If we have multiple with the same style, look above. 
+        - A class can have the same name as an id.
+        *- we can add multiple classes to an element by a simple space, etc.
+        e.g. <p class="copyright test"></p>
+        - hovering over it in VS code will tell us the selector specificity. 
+        - !important is a hack for overriding everything else. 
 
 
-
+        CSS Theory #2: Inheritance and the Universal Selector
+        - Inheritance is a mechanism by which some styles get their properties from parent elements and child elements. 
+        - An inherited property have the lowest priorty and can easily be overriden. 
+        - For example, if we declare a color in the body (such as red), and from there, we overriden it in a element tag, it gets overriden.
+        - This is not conflicting selector, these declare values and get passed down to all the child elements contianed in the body. If they get overridden, so be it.
+        - Not everything gets inherited; for example, adding a border to the body. 
+        - Most text things get inherited, but not all properties. 
+        - Big lists are online. 
+        - We can select more than one class or selector in CSS with a comma seperator: .c1, .c2 {} to apply the style to both elements contains the classes. 
+        - Universal Selector: * {} applies to all the elements on the page. No ineritance involved.
 
 
 
