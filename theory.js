@@ -170,13 +170,88 @@
 
 
         Class and ID Selectors
-        -
-        -
-        -
-        -
-        -
-        -
-        -
+        - The problem with descendent selectors is they mess with the HTMl structure. This is where id's come into play.
+        - When specifing with an id attribute, we name it something, and use the hash selector in CSS.
+        - e.g (<p id="author">) (#author {})
+        - with ID's in CSS, we use #idName (so, for the example, above, #author {})
+        - CSS uses comments as-well with the same format as JS.
+       ex: 
+       #author {
+          font-style: italic;
+          font-size: 18px;
+        }
+        - Another way of labeling elements is through class attributes. 
+        - ID's are not repeatable; therefore, if the id "author" is given to an element, it cannot be reused for a seperate element.
+        - If we need to reuse a name multiple times, we need to use classes.
+        - CSS convention: for multiple words in classes or id's, use dashs or underscores. 
+        - ex: <p class="related-author">
+        - For classes, we use the dot notation in css (.related-author)
+        - We can reuse classes towards mutliple elements.
+        - font-weight: ..., can make text bold.
+        - list-style: none; removes styles from css lists (for example, bullet points from a ul element.)
+        - all we do for id's and classes is use the attribute followed by a name. From there, we go to CSS using the dot or hash notation and apply styles.
+        - ID's are only used once, classes can be used multiple times; however, classes are simply better to use for future notices.
+        - we can use more than one class at the same time for one element; seperate them with an actual space. 
+        ex: <p class="opium city"></p> in CSS we can apply styles to .opium and .city.
+
+
+        Working with Colors
+        - The RBG model: every color consists of Red, Green, and Blue.
+        - In order to represent a certain color, we need to give each of the base colors a value between 0 and 255 (0 red, 0 green, 0 blue)
+        - For max red, (255 red, 0 green, 0 blue) and the same goes for blue & green.
+        - In white, all the colors are at the max of 255, and for black, all the colors are at 0.
+        - From there, there are many combinations that can be put together.
+        - Defining colors in CSS: RGB / RGBA notation, Hexadecimal notation.
+          - RGB: rgb(0, 0, 0) and from here, we can edit the red, green, blue for a color.
+          - RBGA: rgb with transparncy ("alpha") rgba(0, 255, 255, 0.3) 
+          - important to know what these numbers mean.
+          - Hexadecimal notation: instead of using a scale from 0-255, we go from 0 to ff (255 in hexadecimal numbers).
+          - Notation: #00ffff (hash, value for red green and blue)
+          - Shorthand notation: when all colors are identical pairs (#0ff).
+        - In practice, we use the hexadecimal, and if we need transparacy, we use the rgba. 
+        - When all colors in all 3 channels are the same, we get a grey color.
+        - The higher the three numbers get and closer to 255, the grey is lighter and vice versa.
+        ex: color: rgba(50, 192, 38, 0.801); using the color property in css.
+        - In CSS, we two of the same definitons (e.g. color property is chosen twice for the same class), the later one is used.
+        - background-color: ..., changes the color of the selected background.
+        - element selector: selects all with the same element
+        - border: ..., accepts multiple properties
+          - border creates a box around the box. 
+          - We could indiuvally style the  border width, border-style, and border-color properties. Otherwise, with border we can do it all at once.
+          ex: border: 5px solid #1098ad;
+        - Do not forget about pre-designed color names. 
+
+
+
+        Pseudo-classes
+        - font-weight: bold ... makes text bold.
+        - colon notation: we go to element and use the colon notation to use specific properties. 
+        - For example, the first-child selector will look through the element and target the specific first-child element.
+        - There are multiple selectors within the pseudo code classes.
+        - n-thchild(number) find the specific one. Or we can use key-words, such as odd, even, etc.
+        ex: li:nth-child(even) {
+               color: red;
+            }
+        - descendent does not work properly in this case. So, article p:first-child, for example, does not work unless a paragraph is the first-child of the ARTICLE.
+        - mixing multiple elements inside of a parent element make pseduo classes not feasible. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 */
