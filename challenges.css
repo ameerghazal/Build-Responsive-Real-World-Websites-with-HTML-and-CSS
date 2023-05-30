@@ -1,64 +1,3 @@
-* {
-  font-family: sans-serif;
-  line-height: 1.4;
-}
-
-article {
-  border: 5px solid black;
-}
-
-h2,
-h3,
-.btn-add,
-article p:nth-child(4) {
-  text-transform: uppercase;
-}
-
-h2 {
-  text-align: center;
-  background-color: rgba(236, 236, 229, 0.678);
-}
-
-h3 {
-  font-size: 16px;
-}
-
-article p:nth-child(4) {
-  color: rgb(100, 100, 100);
-  font-weight: bold;
-  font-size: 12px;
-}
-
-#price {
-  font-size: 24px;
-}
-
-.details {
-  list-style: square;
-}
-
-a:link,
-a:visited {
-  color: black;
-}
-
-a:hover {
-  text-decoration: none black;
-}
-
-.btn-add {
-  background-color: black;
-  color: white;
-  font-size: 18px;
-  border-style: none;
-}
-
-.btn-add:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-/*
 body {
   font-family: sans-serif;
   line-height: 1.4;
@@ -68,10 +7,52 @@ body {
   border: 4px solid black;
 }
 
-.product-title {
+.product-name {
   text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
   background-color: #f7f7f7;
+  text-transform: uppercase;
 }
-*/
+
+#price {
+  font-size: 24px;
+}
+
+.shipping {
+  color: rgb(100, 100, 100);
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.more-info:link,
+.more-info:visited {
+  color: black;
+}
+
+.more-info:hover,
+.more-info:active {
+  text-decoration: none black;
+}
+
+.details-heading {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.details {
+  list-style: square;
+}
+
+.btn-add {
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  border-style: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background-color: #fff;
+  color: #000;
+}

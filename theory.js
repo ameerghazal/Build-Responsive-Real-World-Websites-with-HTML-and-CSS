@@ -281,6 +281,7 @@
         - Big lists are online. 
         - We can select more than one class or selector in CSS with a comma seperator: .c1, .c2 {} to apply the style to both elements contains the classes. 
         - Universal Selector: * {} applies to all the elements on the page. No ineritance involved.
+        **- we can specify what kind of cursor is used by cursor: ...; in css (e.g. cursor: pointer)
 
 
 
