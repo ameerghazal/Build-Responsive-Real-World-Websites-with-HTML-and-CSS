@@ -283,6 +283,62 @@
         - Universal Selector: * {} applies to all the elements on the page. No ineritance involved.
 
 
+        CSS Theory #3: The CSS Box Model
+        - The Box Model defines how things look on the page. Everything is in style of a box.
+        - Content box: text, images, etc. (we can define the width and height)
+        - Border box: a line around the element, still inside of the element
+        - Padding: invisible space around the content, inside of the element.
+        - Margin: space outside of the element, between elements on the page.
+        - Padding is empty space inside of any element (between the content and the border), while margin is space in between elements.
+        - All of these are actually optional. 
+        - Fill Area: srea that gets filled with background color or background image. If we apply a background image or color, it applies to the entire visible part of the image. 
+        - Analogy: imagine a frame on the wall. Image is the content area, space between the content and the border is the padding, the frame is the border, and the space between other elements on the wall would be the margin. 
+        - Height and width can be specified of the content area; however, they are not the final sizes of the element.
+        - Final element width = left border + left padding + width + right padding + right border.
+        - Final element height = top border + top padding + height + bottom padding + bottom border.
+        - This is a default behavior, but we can change it if we want to.
+
+
+        Margins and Padding
+        - Spacing between the content and the border (outside of the element)
+        - It is specififed as padding: ..px (we can do left, right, top, bottom, etc.)
+        - We can use similar function but using padding: value (for top, bottom) value2 (left right)
+        ex: padding: 20px 40px;
+        - Margins: spacing between elements (mar)
+        - Typically, the last list item should not contain a space. 
+        - margin-bottom: 0; removes the margins from the bottom.
+        - Similar to the padding, we can use margin (right, left, top, bottom, etc.)
+        - margin does not get inherited from parent to child elements.
+        - Use the universial selector for this. 
+        - Global reset: * {margin: 0; padding: 0;}
+        - Creating vertical space is common. Margin-bottom is nice. 
+        - Margins add space from outside the element, while padding adds space within the element.
+        - Collapsing margins: if two margins are specified, the larger one is usually displayed on the page. (e.g. if we have 100px from p and 50px from h3, only 100px from p is applied, since it works for both)
+        - Vertical space: stick to margin bottom.
+
+
+        Adding Dimensions
+        - Using height and width, we can add dimensions to elements.
+        - Width: horizontal
+        - Height: vertical
+        - According to the box model, the height and width are not fully real. Need to addition in the padding.
+        - Better to specify width and height and CSS
+        - Setting the height or weight to auto is only nessicary if the dimensions are set in HTML.
+        - If we just set one in CSS, with none in HTML, the other property will automatically adapt.
+        - Percentages are great for adapting images. 100% is the entire width of the page, etc.
+
+        Centering our Page
+        - <div></div> is a simple box.
+        - div's are basically containers or frames.
+        - So if a div wraps many things, the child elements cannot be larger than the parent container.
+        - For example for the images. If the width is 100%, but the container's max width is 700px, the 100% is based off the 700px
+        *- margin-left: auto, margin-right: auto, means that both the right and the left need to be centered as they will be the exact same size calculated by the browser.
+        - This could also be written as margin: 0 auto;
+        - cannot add margins to small elements, such as anchors.
+
+
+
+
 
 
 
