@@ -4,6 +4,7 @@
   padding: 0px;
 }
 
+/* Page Sections */
 body {
   color: #444;
   font-family: sans-serif;
@@ -24,7 +25,7 @@ body {
   padding-right: 40px; */
   padding: 20px 40px;
   margin-bottom: 60px;
-  height: 80px;
+  /* height: auto; */
 }
 
 nav {
@@ -47,6 +48,7 @@ aside {
   width: 500px;
 }
 
+/* Smaller elements */
 h1,
 h2,
 h3 {
@@ -93,6 +95,7 @@ ol {
 li {
   font-size: 20px;
   margin: 10px;
+  display: in;
 }
 
 /* footer p {
@@ -164,4 +167,20 @@ a:active {
 .post-img {
   width: 100%;
   height: auto;
+}
+
+/* Testing the different displays from inline to blocks */
+nav a:link {
+  /* background-color: orangered;
+  margin: 20px;
+  padding: 20px;
+  display: block; */
+
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+nav a:link:last-child {
+  margin-right: 0;
 }

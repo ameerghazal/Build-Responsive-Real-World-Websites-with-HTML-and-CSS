@@ -337,6 +337,33 @@
         - cannot add margins to small elements, such as anchors.
 
 
+        Different types of boxes
+        - Some boxes span what they need, while others span an overload.
+        - Inline boxes: span exactly what they need.
+            - Occupies only the space necessary for its content,
+            - No line-breaks after or before the element.
+            - box model applies in a different way: heights and widths do not apply.
+            - paddings and margins only apply horizontally (left and right).
+            - default elements: a, img, strong, em, button, etc.
+            - CSS: display: inline
+        - Block level boxes: span all the space that they can and create spaces in between. 
+          - Formatted as blocks and occupy 100% of parent element's width, no matter the content. 
+          - Statcked vertically by default, one after another. 
+          - Box model applies earlier as showen. 
+          - Default blocks: body, main, header, footer, section, nav, aside, div, h1-h6, p, ul, ol, li, etc.
+          - CSS: display: block
+        - Inline elements do not create any vertical space. To have them to do some, we would need to change the display to block.
+        - Inline elements are side-by-side, while blocks take their own area.
+        - Inline-block elements
+            - display: inline-block
+            - look like inline boxes from the outside, but they behave like block-level on the inside.
+            - occupies only content's space.
+            - No line-breaks.
+            - Box-model applies normally. 
+        - We can chain pseudo classes on pseudo classes (nav a:link:last-child)
+        - For pure inline elements, we cannot use width and height. 
+        -
+        -
 
 
 
