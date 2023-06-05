@@ -291,7 +291,7 @@
         - Margin: space outside of the element, between elements on the page.
         - Padding is empty space inside of any element (between the content and the border), while margin is space in between elements.
         - All of these are actually optional. 
-        - Fill Area: srea that gets filled with background color or background image. If we apply a background image or color, it applies to the entire visible part of the image. 
+        - Fill Area: area that gets filled with background color or background image. If we apply a background image or color, it applies to the entire visible part of the image. 
         - Analogy: imagine a frame on the wall. Image is the content area, space between the content and the border is the padding, the frame is the border, and the space between other elements on the wall would be the margin. 
         - Height and width can be specified of the content area; however, they are not the final sizes of the element.
         - Final element width = left border + left padding + width + right padding + right border.
@@ -337,7 +337,7 @@
         - cannot add margins to small elements, such as anchors.
 
 
-        Different types of boxes
+        CSS Theory #4: Different types of boxes
         - Some boxes span what they need, while others span an overload.
         - Inline boxes: span exactly what they need.
             - Occupies only the space necessary for its content,
@@ -362,8 +362,69 @@
             - Box-model applies normally. 
         - We can chain pseudo classes on pseudo classes (nav a:link:last-child)
         - For pure inline elements, we cannot use width and height. 
-        -
-        -
+
+
+        CSS Theory #5: Absoulute Positioning
+        - Normal flow: Default position, elements are laid out according to their order in html code (position: relative)
+        - Absolute Positioning: element is removed from the normal flow. No impact on surrounding elements & might overlap them. We an use the top, bottom, left, or right to offset the element from its relativley positioned container
+        (position: absolute)
+        - Positioned in relation to the viewport.
+        - The pixels should be in relation to some other parent element.
+        - E.g., bottom, right: 50px and making the parent element with (position: relative
+        - Finds the first parent element with the position set to relative. 
+        - Abs. position element is placed (0, 50, ..) is depenedent on the first relativley positionied parebt. 
+        - In other words, we can put any element whereever we want on the page, but it is not good to overuse it. 
+
+
+        Pseudo-elements
+        - Elements that do not exist in the html, but we can style in css.
+        - For example, styling the first letter of a paragraph. 
+        - Psedo classes use one colon (:), and pseudo elemebts use two colons (::)
+        ex: h1::first-letter {
+              font-style: normal;
+              margin-right: 5px;
+        }
+        - Sibling elements are elements inside the same parent.
+        - Adjacent element is the sibling that comes right after it.
+        ex: h3 + p::first-line {
+             color: red;
+          }
+        - the "+" selector is the ajacenet sibling selector. 
+        - before and after pseduo elements create the element after the specified class.
+        - content: "..." specifies the text-content in the created element
+        - testing with top: 0, left: 0 is good for testing abs. positioning.
+        - We can set negative values which will move the other way in direcion.
+        -  top: -10px; right: -25px;
+        - It will not appear in the html, but the css will create it either before or after.
+        ex: 
+              h2::after {
+                content: "TOP";
+                background-color: #ffe70e;
+                color: #444;
+                font-size: 16px;
+                font-weight: bold;
+                display: inline-block;
+                padding: 5px 10px;
+                position: absolute;
+                top: -10px;
+                right: -25px;
+              }
+
+        
+        Developer Skills
+        - Google is a friend. Stackoverflow, MDN, etc. are helpful.
+        - When wanting to center small inline type of elements, use text-align: center in the parent container. 
+        - text-align: sets the horizontal alignmnet of the content inside a block element of a table-cell block. (left, right, center, justify, etc. )
+
+        Debugging HTML & CSS
+        - For example, check where the styling issue occurs and go to that part in the html.
+        - HTML validators are good for checking if the html is even valid or not. Copy the code and put it in a validator. 
+        - diffchecker.com is where we can compare different html's. This is good for debugging as well.
+        - Also, usually, the more complex selectors are the ones that get applied. This is why we should avoid complicated specifites. The higher the specificity number, the more likey to get applied. 
+        - Debugger is good for identifying any type of issue. 
+        - Up and down keys are good for experimenting with different values in the debugger. 
+        - Putting code in a code pen is good for sharing code. 
+
 
 
 
