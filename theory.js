@@ -426,6 +426,56 @@
         - Putting code in a code pen is good for sharing code. 
 
 
+        _______________________________________________________________________
+
+        Section 4: Layouts (Floats, Flexbox, and CSS Grid Fundamentals)
+
+
+        The 3 Ways of Building Layouts
+        - Layout: the way that text, images, and other content is displayed and arranged on the page. 
+        - Arrange page elements into a visual structure, instead of simply having them placed one after another (normal flow)
+        - Page Layout: laying out the elements inside of a page.
+          - These layout contain components, in which these components have their own layout.
+        - Component Layouts: components themselves also have a layout. 
+        - This is similar to Figma when using multiple frames within frames.
+        - Float layouts: old way of building layouts of all sizes, using the float CSS property. (getting outdated)
+        - FlexBox: modern way of laying out 1-dimensional row without using floats, which is perfect for componenet layout.
+        - CSS Grid: for laying out element in a fully-fleged 2-d grid. Perfect for page layouts and complex components. 
+
+
+
+        Floats
+        - Typing "lorem" will create a bunch of fake text.
+        - Using float: ... will float around the image. 
+        - Using this layout removes it from the flow.
+        - if the childs are all floated, it is as if the height of the parent is 0, due to the "empty" elements. 
+        - float: left, float: right
+        - Elements are removed from the normal flow. 
+        - Text and inline elements will wrap around the floated elements, which is different from abs. positiong. 
+        - The container will not adjust its height to the element. 
+
+
+        Clearing floats
+        - We can create an empty div element inside the header and clear the float by using the clear property. ("clear: both", or left, right)
+        - Using empty div's, however, is not a good practice.
+        - Another way is fo us to use a psuedo elements, select the header and set the display to block with an empty content and a clear property.
+        - .clearfix::after {
+            clear: both;
+            content: "";
+            display: block;
+          }
+
+          Building a Simple Float Layout
+          - Float property makes it that the elements that come after it float around it, which makes them cofnusing.
+          - For example, if we select a footer, but there is something after it, it will grab that element too.
+          
+          Box-sizing: border-box
+          - Default box model adds the border and the padding on top of the width and height.
+          - By adding box-sizing: border-box, it allows the final width and final height to simply equal the width and height, rather than adding in the padding and borders. 
+          - The default behavior is 'content-box'.
+          - Using this method makes the width and height stay true to the actual value.
+          - Attach this property to the global reset and universial selector.
+
 
 
 
