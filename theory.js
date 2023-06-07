@@ -478,7 +478,73 @@
 
 
 
+          Intro to Flexbox
+          - To start with flex box, set the display property of the container to "display: flex".
+          - The parent is the container and the childern are flex items. For example, a div with 6 children.
+          - Horizontally, setting the display to flex makes each element take as much room as it needs. For example, a box with the text "amazing" will, horizontally, span the word.
+          - Vertically, it is a different story. All the children are the same height as the tallest element within the flexbox display. 
+          - Flexbox has a vertical alignment property. "align-items: center" we can also use  "flex-start" and "flex-end"
+          - By default the align-items is set to "strech", meaning they strech as tall as the tallest element.
+          - We can also center all the items horizontally in the flex-container by using (justify-content: center)
+          - justify-content has also other nice properties (space-between), which spaces out the children at an equal spacing. 
+          
 
+          A Flexbox Overview
+          - Flexbox: set of related CSS properties for building 1-dimensional layouts.
+          - Makes it easy to align items to one another both horizontally and vertically in the parent container.
+          - Flexbox solves common problems such as vertical centering and creating equal-height columns
+          - Flexbox is perfect for replacing floating, allowing us to write fewer and cleaner code.
+          - Terminology
+            - Flex container: set the display property to flex (display: flex), and all the direct children of the parent will be flex-items.
+            - Main axis is the horizontal axis, and Cross Axis is the vertical axis.
+            - We can change these and line items up on either axis, so this is an important concept to grasp.
+          - Flex Container Properties:
+            - gap: ... creates space between items, without using margin.
+            - justify-content:  .... align items along main axis (horizontal, by default).
+            - align-items: ... align items along the cross axis (vertically, by default).
+            - flex-direction: ... to define which is the main axis.
+            - flex-wrap: ... to allow items to wrap into a new line if they are too large.
+            - align-content: ... only applies when there are multiple lines (flex-wrap: wrap)
+          - Flex Items Properties:
+            - align-self: auto ..... overwrite align-items for indiviual flex-items
+            - flex-grow: 0 (...) allow an element to grow (0 means no, 1... mean yes)
+            - flex-shrink: 1 (...) allows an element to shrink (same as above)
+            - flex-basis: auto (...) used to define an item's width, instead of the width property.
+            - flex: 0 1 auto ... recommended shorthand for flex-grow, shrink, basis.
+            - order: 0 ... contros the order of items to change them on the page rather than the src code.  (-1 first, 1 last)
+
+        
+          Spacing and Aligning Flex Items
+          - Using align items will make is so all the items all the same alignment. To override this for a certain child, use align self.
+          - strech makes it so it matches the biggest child. 
+          - By default the order is 0 for all the elements. To move one of them to the first position, simply give it a number less than 0. To move it all the way to the back, use a number greater than 0.
+          - Using order, we can create an order by (1,2,3, etc.)
+          - The gap property is good for spacing and is applicable in the container. 
+          
+
+          The Flex Property
+          - When setting a flex-basis, it is a reccomendation to the browser.
+          - By default, flex-box is allowed to shrink the elements to fit the container. This is because flex-shrink is automatically set to 1.
+          - If we can the flex-shrink to 0, it determines whether flex-box is allowed to shrink or not.
+          - By setting flex-grow: 1 for one or all of the elements, the total space of the container will be filled up. By setting the same flex-grow to all, then all the children have the same size.
+          - If the flex-grow is greater for one child than the others, then it will take up more space. 
+          - Do not use basis, shrink, and grow explicity, use the flex: ... property.
+          - The shorthand property is much better to use. (flex: grow shrink basis)
+
+          
+          Adding Flexbox to our Project
+          - justfiy-content: space-between; takes all the space in between the elements spanning the container and splits it up equally.
+          - Wrapping items in div's is very helpful in certain display flex alignment. It is basically using frames in Figma. Where, for example, there is a div containing a heading and paragraph and an outer div... 
+          - Never forget, the link pseduo class is needed when styling links (link:link)
+          - Vertical spacing, again, does not work for inline items. Need to display them as blocks
+          - The issue with gap is not all browsers support it. 
+          
+          Building a simple flexbox layout
+          - With flexbox, alot of times creating a new container / div is important to acheving a layout.
+          -
+          -
+          -
+          -
 
 
 

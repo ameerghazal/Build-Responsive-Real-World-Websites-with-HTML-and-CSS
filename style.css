@@ -183,7 +183,6 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -225,47 +224,63 @@ h2::after {
   right: -25px;
 }
 
-/* FLOATS */
-.author-img {
-  float: left;
-  margin-bottom: 20px;
+/* FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .author {
-  margin-top: 10px;
-  float: left;
-  margin-left: 20px;
+  margin-bottom: 0;
+  margin-left: 15px;
 }
 
-h1 {
-  float: left;
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-nav {
-  float: right;
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
 }
 
-/* .clear {
-  clear: both;
-} */
-
-.clearfix::after {
-  clear: both;
-  content: "";
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
   display: block;
+  margin-bottom: 5px;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+  margin-bottom: 60px;
 }
 
 article {
-  width: 825px;
-  float: left;
+  flex: 1;
+  margin-bottom: 0;
 }
 
 aside {
-  width: 300px;
-  float: right;
-}
+  /* DEFAULTS
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; */
 
-/* We can use this after32 */
-footer {
-  clear: both;
+  flex: 0 0 300px;
 }
