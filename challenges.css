@@ -5,6 +5,7 @@
   /* global reset */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -52,7 +53,7 @@ h3 {
 }
 
 .details-heading {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   margin-bottom: 15px;
 }
 
@@ -129,12 +130,12 @@ a:active {
   background-color: black;
 }
 
-.block-3 {
-  background-color: red;
-}
-
 .block-2 {
   background-color: blue;
+}
+
+.block-3 {
+  background-color: red;
 }
 
 .block-4 {
@@ -149,10 +150,41 @@ a:active {
   background-color: brown;
 }
 
-/* 
-.blocks div {
-  display: block;
+/* Section 4: Challenge 1 */
+
+.price {
+  float: left;
+}
+
+.shipping {
+  float: right;
+  margin-top: 8px;
+}
+
+.description {
+  clear: both;
+  margin-bottom: 10px;
+}
+
+.shoe {
+  float: left;
+  margin-right: 40px;
+}
+
+.description-all {
+  /* (825px - 8 - 250 - 80) */
+  width: 243px;
+  float: left;
+  margin-right: 39px;
+  margin-top: 20px;
+}
+
+.details-all {
+  margin-top: 20px;
+  width: 243px;
+  float: left;
+}
+
+.inner-frame {
   background-color: red;
-  color: red;
-  padding: 1px 1px;
-} */
+}
