@@ -541,16 +541,67 @@
           
           Building a simple flexbox layout
           - With flexbox, alot of times creating a new container / div is important to acheving a layout.
+          
+          Introduction to CSS Grid
+          - By setting display: none, we remove it from the page.
+          - In CSS grid, we have a grid container and grid items.
+          - display: grid; on the container.
+          - grid-template-columns: (number of columns with a width each), for example, grid-template-columns: 250px 150px (1st column is 250 px, 2nd is 150px)
+          - grid-template-rows: .... (same as the columns, we can give the number of rows with an explict height)
+          - AS many rows as created as nesecarry to adapt to the columns.
+          - Elements and heights adapt to the max height. (default)
+          - We can resize the columns and rows, however. 
+          - To specify spacing, use gap: ... (we can specify row and column gaps aswell).
+          - row-gap: ..px;
+          - column-gap: ...px;
+
+          CSS Grid Overview
+          - Set of CSS properties for building 2-d layout.
+          - Main idea is that we can divide a container element into rows and columns. 
+          - Allows us to write less nested HTML and easier-to-read CSS.
+          - Not meant to replace flexbox. For 1-d layouts, use flexbox, and for 2-d use grid. They work toghether.
+          - Grid-container: set the display to grid, and inside the container are all the grid-items.
+            - Column axis: vertical axis
+            - Row axis: horizontal axis
+            - We cannot interchange these rows like in flexbox. 
+            - Grid-lines: seperate the columns and rows.
+              - If we have 3 columns, we have 4 numbers. If we have 2 rows, we have 3 numbers. 
+              - Each box features a grid-cell (may or may not be filled).
+              - Gutters (gaps): spacing between columns and rows.
+              - Grid-track: space taken up.
+          - Grid-container properties: 
+            - grid-template-rows: <track size>
+            - grid-template-columns: <track size>
+            - row-gap: ....; column-gap: ....; gap: ....;
+            - justify-items: strech, center, ... (horizontal) 
+            - align-items: start, end, ... (Vertical)
+            - justify-content: ..., align-content: ...; (aligns grid inside grid contaier, which only applies if the container is larger than the grid)
+          - Grid-items properties:
+            - grid-column: ...;
+            - grid-row: ... (places a grid item in a specifc cell, based on line numbers) [span keyword can be used to span across more cells]
+            - justify-self: ...;
+            - align-self: ...; (used for a single item)
+
+
+          Sizing Grid Columns and Rows
+          - fr unit: stands for fractional / fraction.
+          - Using this unit will attempt to resize rather than using a set pixel value. 
+          - To set all the columns to the same width, set all of them to the same fr. To short the process, use the repeat() function.
+          - grid-template-columns(rows): repeat(#ofcol/row, #fr)
+          Ex: grid-template-columns: 5fr repeat(3, 1fr); [4 columns with one larger than the other 3]
+          - We can use the auto keyword at the end, which will adapt to the amount of space remaining. 
+          - For using fr unit in rows, we have to define a height for the container.
+          - grid-template-rows: auto; will occupy the space it needs. 
+          - Typically, we only need to use the template on columns. 
+
+
+          Placing and Spanning Grid Items
+          - 
           -
           -
           -
           -
-
-
-
-
-
-
+          -
 
 
 */

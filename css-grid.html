@@ -40,9 +40,22 @@
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        /* grid-template-columns: 1fr 1fr 2fr auto; */
+        /* grid-template-rows: 300px 200px; */
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        /* height: 500px; */
+
+        /* gap: 30px; */
+        column-gap: 30px;
+        row-gap: 60px;
       }
 
       .container--2 {
+        display: none;
+
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
