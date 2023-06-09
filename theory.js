@@ -616,12 +616,20 @@
 
           Building a simple CSS Grid layout
           - By not defining the rows, we let css grid adapt. 
-          -
-          -
-          -
-          -
-          -
+          
+
+          ___________________________________________________________________
 
 
+          SECTION 5: Web Design Rules and Framework
+          
+
+          Project Overview
+          - <section></section>: it is a sematic section element, similar to an article. We could have used a div, but this is better for sections.
+          - <span></span>: genric inline elements for texts. 
+          - <blockquote></blockquote>: good for wrtiting a quote. 
+          
+
+          
 
 */
