@@ -575,6 +575,7 @@
             - row-gap: ....; column-gap: ....; gap: ....;
             - justify-items: strech, center, ... (horizontal) 
             - align-items: start, end, ... (Vertical)
+            - btw: different starting and end from flex-box!!!
             - justify-content: ..., align-content: ...; (aligns grid inside grid contaier, which only applies if the container is larger than the grid)
           - Grid-items properties:
             - grid-column: ...;
@@ -596,12 +597,31 @@
 
 
           Placing and Spanning Grid Items
-          - 
+          - We can specify where we want to put an element in the grid. For example, if we want to move an element into the 2nd column 1st row: 
+          ex: grid-column: 2 / 3; " 2 to 3"
+              grid-row: 1 / 2;
+          - grid-column(row): column (row) / next column (row);
+          - If the second value is just one greater, we can omit it (grid-column: 1 / 2 == grid-column: 1)
+          - We can adjust the second value to span more than one column and strech the data. 
+          ex: grid-column: 1 / span 3; == grid-column: 1 / 4;
+          - Instead of manually spanning, we can use grid-column: 1 / -1 (which spans the entire column).
+          - The grid-row works exactly the same.
+
+          Aligning Grid Items and Tracks
+          - If the grid is smaller than the grid container, we can align the tracks to distrubute the empty space. 
+          - By using align and justify items, we can edit the items INSIDE Celling / moving items around inside cells. 
+          - content properties: align tracks inside the container (if the container is bigger)
+          - items propeties: are for inside the cells.
+          - We can override items propeties by using the self properties. 
+
+          Building a simple CSS Grid layout
+          - By not defining the rows, we let css grid adapt. 
           -
           -
           -
           -
           -
+
 
 
 */
