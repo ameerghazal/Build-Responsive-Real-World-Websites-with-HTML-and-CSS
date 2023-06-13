@@ -910,6 +910,28 @@
 
         SECTION 6: Components and Layout Patterns
           
+        Web Design Rules #10 - Part 1: Elements and Components
+        - Devlop small elements and make them into components and devlop layouts, and from there, make up a final webpage.
+        - Guidelines:
+          - Use components and common elements to convey your website's information.
+          - Combine components into layouts using common layout patterns.
+          - Assemble different layout into a complete, final page. 
+            - Elements: text, buttons, images, input elements, tags.
+            - Components: Pagination, breadcrumbs (used for navgation), stats, gallery, feature box, accordion (Q&A's), tabs, tables, modal's, preview and profile cards, carousel's, forms, and many more.
+            - Section components: navigation, footer, hero section, feature row, etc.
+            - Layout Patterns: Row of boxes or cards, grid of boxes or cards, z-pattern, f-pattern, single-column, sidebar, muti-column, and more.
+        - Check the slides for more information.
+        
+
+        Building an Accordion Component Part 1 
+        -
+        -
+        -
+        -
+        -
+        -
+        
+
 
           
 
