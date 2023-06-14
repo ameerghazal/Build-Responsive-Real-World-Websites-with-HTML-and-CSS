@@ -974,7 +974,40 @@
         background-color: #f8f9fa;
       }
 
+        - IMPORTANT: AND selector: noe space, only happens if the selector has both classes. For example, btn.btn-tiny {}
 
+
+
+        Web Design Rules #10 - Part #2: Layout Patterns
+        - Section Components: Navigation & Secondary Navigation (within one section), Hero Section, Footers (some use site-maps), Call-to-Action (newspaper, free-trial, contatct, etc.), feature row, 
+        - Patterns: row of boxes/cards, grid of boxes/cards, z-pattern, f-pattern, single column patterns, side-bar, maganize/multi-column, experimental layouts
+        - Z-patterns: left to right to left, etc. 
+        - F-pattern: repeating feature rows, can be inverted
+        - We can nest patterns and components.
+
+
+        Building a Hero Section - Part 1 & 2
+        - The 'vh' unit stands for viewport height. So, using 100vh on an item is making it 100% of the viewports height, regardless of the resizing. 
+        - The 'vw' unit stands for viewport width, but it is rarley used since elements are block elements. 
+        - Laying out boxes is a logical thing.
+        - background-image: url(path); will make an image the background
+        - background-size: cover; covers the element with the resizing
+        - In order to add a tint to an image, we stack background-images. So use a gradient. So background-image: linear-gradient(), url()
+        ex: background-image: linear-gradient(
+            rgba(34, 34, 34, 0.6),
+            rgba(34, 34, 34, 0.6)
+          ),
+          url(hero.jpg);
+        - This will create a stack of images.
+        
+
+        Building a Web Application Layout (1-2)
+        - <menu></menu> this is for menu buttons in a web application
+        - <main></main> is for the major priority.
+        - The body element does not automatically occupy the entire viewport, we need to specify that. In order to change this, change the height to 100vh (which is 100% of the viewport)
+        - By setting the margin-left: auto (we can move something to the end of the page)
+        - overflow: scroll; adds a scroll bar for any content that overflowed.
+        - overflow: hidden; hides anything that extends the height.
         
 
 
