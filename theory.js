@@ -942,7 +942,39 @@
         color: #087f5b;
       }
         - open is the parent and the rest are children.
-        -
+        - Flex direction column and parenting are main takeaways.
+
+
+        Building a Carosul Component (1-2)
+        - transform: .... is for scaling elements. It is a property b which we want to sclae.
+        ex: transform: scale(#), if it is 1, it stays the same, the bigger it gets the bigger, etc.
+        - box-shadow: ......... is an important property for adding shadows. 
+        - Absolute Postioning, we take the element completley out of the flow of the page. We do this by using (position: absoulte), and from there we need to specify the container at which the item(s) will be absolutley positioned.
+        - In shorter terms, add postion: absolute to the item. Find the parent, and add position: relative,
+        - border-radius: 50%; makes a square a circle. 
+        - Adding mutliple classes onto something is very good for changing specific things but not all the properites.
+        - Vertical Centering w/ Abs. Position & Transform: from the parent container, use top: 50% on the item. From there, this will not work fully since it'll shift down the entire half. To combat this, use the transform: translate (0, -50%) property to shift it back up to this middle. 
+        - transform: translate(x-axis (horizontal shift), y-axis (vertical shift)); It is a property that translates based on the elements width and height, rather than the container. We can use pixels, percentages, etc. Negatives and positives work as normal.
+        - HTML ENTITY: &nbsp; is good for an empty space.
+        *- top: ... and left: ... use the dimensions of the parent element as their starting references. 
+        - we can write out the padding in one go-> padding: top right bottom left
+        ex:         padding: 32px 48px 32px 86px;
+
+
+        Building a Table Component (1-2)
+        - <table></table> stands for a table element.
+        - <tr></tr> stands for a table row, within each table.
+        - <td></td> stands for table data, within each table row. 
+        - <thead></thead> stands for the tables header (semantically, it makes more sense)
+        - For elements in the <thead></thead> to make them semeatic & look different, use <th></th> element, which makes the text bold, also, they are centered.
+        - <tbody></tbody> stands for the body of the table
+        - margin: 0 auto; centers the body in the viewport. Also, simply using a flex display and justfiiying the content to center will do the same thing. 
+        - border-collapse: collapse; (if two borders are next to each other, only one is used)
+        - Don't forget about the pseduo class:  tbody tr:nth-child(odd) {
+        background-color: #f8f9fa;
+      }
+
+
         
 
 
