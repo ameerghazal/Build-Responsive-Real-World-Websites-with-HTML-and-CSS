@@ -973,6 +973,7 @@
         - Don't forget about the pseduo class:  tbody tr:nth-child(odd) {
         background-color: #f8f9fa;
       }
+      - IMPORTANT: AND selector: noe space, only happens if the selector has both classes. For example, btn.btn-tiny {}
 
 
         
