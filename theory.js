@@ -924,11 +924,24 @@
         
 
         Building an Accordion Component Part 1 
-        -
-        -
-        -
-        -
-        -
+        - Instead of using the margin bottom trick and going in and changing it back for every element, use flexbox gap property.
+        - Typically, flexbox sets them side-by side, but we can change the flex-direction to column.
+        - display: flex; flex-direction: column; (sets it vertical, it autos to row)
+        - The main axis for flex box is the horizontal axis. By changing the flex-direction,  we flip the propeties as well. So, align-items would allign horizontally rather than the normal vertical & vice versa. 
+        - By flipping the main axis, we flip the properites as well. Normally, in flex-box, the gap propety is horizontal space. By flipping the direction, it is now vertical spacing. 
+        - By using auto (for the width), it is based on the automatic width that adjusts from the screen size. 
+
+        Building an Accordion Component Part 2
+        - For opening and hiding certain elements, we can add another class to them. From there, we can create styles for a class if it is applicable. In this example, we used an open class, and if the open class was valid, it went the box. If the open class was not on the item, it skipped over this. 
+        - This is similar to the JS logic. 
+        ex: .open .hidden-box {
+      }
+        - By changing the display from none we can view what is in the box. 
+        ex .open .number, .open
+      .text {
+        color: #087f5b;
+      }
+        - open is the parent and the rest are children.
         -
         
 
