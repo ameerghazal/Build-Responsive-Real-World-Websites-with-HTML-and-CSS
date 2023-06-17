@@ -1086,22 +1086,63 @@
         - By using the transition property, we can add a nice transition feature after, say, 1 second of a hover. Natural time is 0.3 seconds.
         ex:   transition: all 1s;
         - We can define helper classes in css. For helper classes, use the !important keyword.
+        - To stack images on top of each other, we have to use a negative margin because negative gaps will not work. 
+        ex: margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+        
+
+        Building the Header
+        - If we want the header to be sticky, set the bar to a fixed height. 
+        -
+
+        Building the Navigation
+        - Use the nav element, but inside of it, instead of just adding a bunch of anchors, create an unorded list with list elements containting each anchor. This is better sematically. 
+        - Using a transition is very good fot "buttons"
+        - The "and" selector is important in css.
+        
+
+        Setting up a resuable grid
+        - Set up a grid display with a set gap and then create other classes.
+        - This is making a generic grid.
+        Ex:
+         .container {
+            max-width: 120rem;
+            margin: 0 auto;
+            padding: 0 3.2rem;
+          }
+
+          .grid {
+            display: grid;
+            gap: 9.6rem;
+          }
+
+          .grid--2-cols {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .grid--3-cols {
+            grid-template-columns: repeat(3, 1fr);
+          }
+
+          .grid--4-cols {
+            grid-template-columns: repeat(4, 1fr);
+          }
+
+          <section class="section-how">
+            <div class="container grid grid--4-cols">
+              <div>Test 1</div>
+              <div>Test 2</div>
+              <div>Test 3</div>
+              <div>Test 4</div>
+            </div>
+      </section>
+        - WRAP IT INTO ANOTHER DIV ELEMENT FOR THAT CERTAIN BLOCK OF CODE. THIS IS SIMILAR TO THE UFLIP WEBPAGE.
         -
         -
         -
-        -
-        -
-        -
-        -
-        -
-        -
-        -
-        -
-        -
-        -
-        -
-        -
-        -
+
+        // WANT TO ADD A TRANSTION HOVER FEATURE FOR THE LINKS ON THE WEBPAGE. 
+        // CONVERT IT ALL INTO REM
 
 
           
