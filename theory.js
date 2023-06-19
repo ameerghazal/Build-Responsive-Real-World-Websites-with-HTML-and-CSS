@@ -1135,14 +1135,66 @@
               <div>Test 3</div>
               <div>Test 4</div>
             </div>
-      </section>
+          </section>
+
         - WRAP IT INTO ANOTHER DIV ELEMENT FOR THAT CERTAIN BLOCK OF CODE. THIS IS SIMILAR TO THE UFLIP WEBPAGE.
+  
+
+      
+        Building the How it Works Sections (1-2)
+        - For new parts inside of a section, use headings; otherwise, simply use spans or paragraphs.
+        - For Z-patterns, watch the container placement. For example, one may have the description then the img & the next step may flipp that pattern.
+        - Using simple gray colors, such as #333 are better than using specific grays.
+        - We can use multiple stylesheets if needed. Simple just plug them with the link tag into the html.
+        -Pseudo elements insert childs into the html.
+        - We cannot add child elements to images.
+        - To make the percent working on the height, use a padding percentage of the same width. For example,  width: 60%;
+  padding-bottom: 60%;
+        - z-index: (+ or -) and what it does is displays the order of the background. This is useful for stacking elements or cool shadows. For example, if we want something all the way under (z-index is negative...)
+        
+
+        Building the Featued-In Section
+        - Space-around is also nice for adding gaps from the sides.
+        - filter: .... is a new css property for editing the colors of images. 
+        - opacity: (0-100%) changes the visibilty of images. This combined with a brightness(0%) filter property is a good way to make logos gray
+        
+
+        Building the Meals Section (1-3)
+        - By injecting script tags through instaliation, we can use icons easier. This is similar to forkify. 
+        - Different icon packs work differently
+        - We can redefine elements. For example, we can redefine the font-weight of a strong element. 
+        - By using overflow:hidden; in css, we can blend in theborder-radius
+        -
+        -
         -
         -
         -
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // WANT TO ADD A TRANSTION HOVER FEATURE FOR THE LINKS ON THE WEBPAGE. 
         // CONVERT IT ALL INTO REM
+        // ADD A HELPER CLASS FEATURE / REUSABLE COMPONENTS
 
 
           
