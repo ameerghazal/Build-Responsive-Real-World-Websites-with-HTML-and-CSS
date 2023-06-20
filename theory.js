@@ -1507,6 +1507,8 @@ ________________________________________________
               />
             </picture>
 
+            - Hover.com is a way to create a custom domain.
+
 
 
 
