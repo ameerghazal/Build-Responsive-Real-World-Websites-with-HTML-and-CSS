@@ -1323,7 +1323,189 @@ ________________________________________________
         - creating grids with 6 columns are helpful
 
 
+        ______________________________________________________________________
+
+        SECTION 9 OMNIFOOF: EFFECTS AND OPTIMIZATIONS
+
+        -  <script defer src="js/script.js"></script> add this tag right before the title.
+        - In JS, the hypens do not work. Instead, they use the capitial notation. background-color == backgroundColor
+        ex: h1.style.backgroundColor = "red";
+
+        - When adding and using classLists, just use the name of the class, not the dot. 
+
+        Implementing Smooth Scrolling
+        - We can create anchors within the page through id's. To do this, simply add an id to an element of choice. At the certain anchor tag, use the # followed by the id. Once this anchor is clicked, it will go down to the page with the selected id.
+        ex: <a href=#cta></a>
+        -  scroll-behavior: smooth; add this property to the html for a smooth scroll. The issue is, however, that it does not work on safari engines.
+
+        - We can select psuedo classes in js by using the class name followed by the psuedo class selector
+        ex: const allLinks = document.querySelectorAll("a:link");
+        - We can also get attributes out of html elements. For example,
+        const href = link.getAttribute("href");
+
+        - Proper Scrolling Animation in JS:
+          const allLinks = document.querySelectorAll("a:link"); // selects all links
+
+        allLinks.forEach(function (link) {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const href = link.getAttribute("href");
+            console.log(href);
+
+            // Scroll back to top
+            if (href === "#") {
+              window.scrollTo({
+                top: 20,
+                behavior: "smooth",
+              });
+            }
+
+            // Scroll to other links
+            if (href !== "#" && href.startsWith("#")) {
+              const sectionEl = document.querySelector(href);
+              sectionEl.scrollIntoView({ behavior: "smooth" });
+            }
+
+            // Close mobile navigation
+            if (link.classList.contains("main-nav-link")) {
+              headerEl.classList.toggle("nav-open");
+            }
+          });
+        });
+
+
+        Implemeting Sticky Navigation
+        ex: const sectionHeroEl = document.querySelector(".section-hero");
+            const obs = new IntersectionObserver(
+              function (entries) {
+                const ent = entries[0];
+
+                if (!ent.isIntersecting) {
+                  document.body.classList.add("sticky");
+                }
+
+                if (ent.isIntersecting) {
+                  document.body.classList.remove("sticky");
+                }
+              },
+              {
+                //  In the viewport
+                root: null,
+                threshold: 0,
+                rootMargin: "-80px",
+              }
+            );
+            obs.observe(sectionHeroEl);
+       
         
+        Browser Support and Fixing Flexbox Gap in Safari
+        - backdrop-filter: blur(10px); this property will blur the background of the element. In other words, the element under the current element. 
+        - -webkit-backdrop-filter: blur(10px); is for adaptation for safari
+        - There are many other vendor prefixes. 
+        - The following fixes the old browser flexbox gap issue in safari's old browsers
+        // Fixing flexbox gap property missing in some Safari versions
+        function checkFlexGap() {
+          var flex = document.createElement("div");
+          flex.style.display = "flex";
+          flex.style.flexDirection = "column";
+          flex.style.rowGap = "1px";
+
+          flex.appendChild(document.createElement("div"));
+          flex.appendChild(document.createElement("div"));
+
+          document.body.appendChild(flex);
+          var isSupported = flex.scrollHeight === 1;
+          flex.parentNode.removeChild(flex);
+          console.log(isSupported);
+
+          if (!isSupported) document.body.classList.add("no-flexbox-gap");
+        }
+        checkFlexGap();
+
+        // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+
+        
+        .no-flexbox-gap .main-nav-list li:not(:last-child) {
+          margin-right: 4.8rem;
+        }
+
+        .no-flexbox-gap .list-item:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+
+        .no-flexbox-gap .list-icon:not(:last-child) {
+          margin-right: 1.6rem;
+        }
+
+        .no-flexbox-gap .delivered-faces {
+          margin-right: 1.6rem;
+        }
+
+        .no-flexbox-gap .meal-attribute:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        .no-flexbox-gap .meal-icon {
+          margin-right: 1.6rem;
+        }
+
+        .no-flexbox-gap .footer-row div:not(:last-child) {
+          margin-right: 6.4rem;
+        }
+
+        .no-flexbox-gap .social-links li:not(:last-child) {
+          margin-right: 2.4rem;
+        }
+
+        .no-flexbox-gap .footer-nav li:not(:last-child) {
+          margin-bottom: 2.4rem;
+        }
+
+        @media (max-width: 75em) {
+          .no-flexbox-gap .main-nav-list li:not(:last-child) {
+            margin-right: 3.2rem;
+          }
+        }
+
+        @media (max-width: 59em) {
+          .no-flexbox-gap .main-nav-list li:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 4.8rem;
+          }
+        }
+        
+
+        Testing Performance with Lighthouse
+        - Good for pre-testing the page.
+        - It will not always be accurate.
+        
+        Adding Favicon and Meta Description
+        - To include fav icons, use the link element, with the rel and the href
+        ex: <link rel="icon" href="img/favicon.png" />
+        - Also, it is better to resize these items smaller to save storage & increase performance. 
+        - Make sure to add the correct icons for all web-browsers
+        ex:  <link rel="icon" href="img/favicon.png" />
+            <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+            <link rel="manifest" href="manifest.webmanifest" />
+        
+
+            Image Optimization
+            - squoosh.com is a good way for compressing images. 
+            - Some browsers do not support the compressed file. 
+            - <picture></picture> is for images
+            - We can specifiy two different <source> tags for each image. 
+            - Which ever one is better / can be displayed, will be chosen.
+            - For example, 
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero.min.png" type="image/png" />
+
+              <img
+                src="img/hero-min.png"
+                class="hero-img"
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table."
+              />
+            </picture>
 
 
 
