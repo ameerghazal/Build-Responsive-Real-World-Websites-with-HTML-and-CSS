@@ -1164,18 +1164,81 @@
         - Different icon packs work differently
         - We can redefine elements. For example, we can redefine the font-weight of a strong element. 
         - By using overflow:hidden; in css, we can blend in theborder-radius
-        -
-        -
-        -
-        -
-        -
+        - Using the currentColor keyword will use the text color.
+        - By using the transparent keyword, the color is invisible.,
+        
+
+        Building the Testimonials (1-2)\
+        - <figure></figure> is a good element for things with a caption (e.g., user icon with cpation)
+        - <figcaption></figcaption> only allowed to be used inside of figure, which is the caption of the figure.
+        - For images, the are auto set to inline elements. To remove the random whitespace between them, change it to a block display.
+        - By setting the width to 100% on an image, it changes auto adjustes the sizing of the image to fit the screen.
+        - trasnform: rotate(degrees) will roatate the degrees
+        - transform: scale(1.1) with a transition time and setting the overflow: hidden, we can create an animation where (once hovered) the image zooms in, without breaking the grid. 
+        
+
+        Building the Pricing Section (1-2)
+        - When building layouts, use percentages.
+        - For ribbons, use the transform rotation with an absolution position and an overflow hidden.
+        - Alot of this is just playing around with it in the console. 
+        - .grid:not(:last-child) is a selector for a more general approach.
+        
+
+        Building a Call-to-Action Section (1)
+        - background-image: linear-gradient(90deg, red, #e67e22);
+        - For gradients like above, we can use degrees to specify which way, but we can also use key-phrases, such as 'to  right
+        - When using background-images with url's, we need to move out of the folder we are in and into the image folder.
+        **- to go one level up, use ../ before what is needed
+        - background-postion: ..., is helpful for certain images.
+        - When using empty div's, add a role and aria-label tab for accesibility: - EX: <div class="cta-img-box" role="img" aria-label="Woman enjoying food"></div>
+
+
+        Building a Call to Action Section (2)
+        - <form></form> element used when introducing a form, such as a model window.
+        - <input type="" /> these are input boxes/fields, in which we can determine a type, such as 'number' and apply the placeholder property.
+        ex: <input type="text" placeholder="Your Name" />
+        - We can also use labels instead: 
+        <label >Full Name</label>
+        <input type="text" placeholder="John Smith" />
+        - We can link labels to input tags through id's. To do this, give the input element an id and give the corresponding label the same id.
+        ex:  <label for="full-name">Full Name</label>
+                <input id="full-name" type="text" placeholder="John Smith" />
+        - <select></select> is used for a drop down box. Within the select element, we can define multiple <option></option> elements, which are items in the drop down.
+        - <option></option> for these drop down items, we must define the value="" property.
+        ex: <option value="">Please choose one</option>
+
+        - the 'required' tag can be added onto any element; furthermore, the element must be chosen properly so the form can submit.
+        ex: 
+        <label for="select-where">Where did you hear from us?</label>
+                <select id="select-where" required>
+                  <option value="">Please choose one option:</option>
+                  <option value="friends">Friends and family</option>
 
 
 
+        Building a Call to Action Section (3)
+        - Input fields do not auto inherit the font-family. 
+        - We can override this by using font-family: inherit;
+        - The inherit keyword inherits from the parent.
+        - We can select pseduo elements for input placeholders: (.form input::placeholder)
+        - We can remove default tab outlines by using
+          *:focus {
+            outline: none;
+          }
+        
 
+          Building a Footer (1-2)
+          - <address></address> is a semantic element for impleting an address box.
+          - With anchors, we can make phone numbers and emails useable by changing the href property.
+          - For phone numbers, use <a href="tel:..."></a>
+          - For emails, use <a href="mailto:..."></a>
+          ex: 
+          <a href="tel:415-201-6370">415-201-6370</a>
+          <a href="mailto:hello@omnifood.com"></a>
+          - <br /> element will issue a line-break
+          -
 
-
-
+        
 
 
 
