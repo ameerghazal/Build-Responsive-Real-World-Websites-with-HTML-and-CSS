@@ -1236,7 +1236,92 @@
           <a href="tel:415-201-6370">415-201-6370</a>
           <a href="mailto:hello@omnifood.com"></a>
           - <br /> element will issue a line-break
-          -
+          
+
+________________________________________________
+
+
+    SECTION 8 RESPONSIVE OMNIFOOD
+
+          How Media Queries Work
+          - Media queries work with the max width property (or min-width)
+          ex: @media (max-width: 600px)
+          - This asks the browser if the screen space less than or equal to 600px ...
+          - These are tools for overriding our CSS based on the viewport space. 
+          - IF a viewport is less than both media queries, both apply; however, if they are confliciting properties, then the lesser px applies. 
+          - With that said, order matters. 
+          ex: 
+
+          @media (max-width: 600px) {
+            .section-hero {
+              background-color: blue;
+            }
+          }
+          
+
+          How to select breakpoints
+          - Bad: basing breakpoints based off a certain device.
+          - Good: basic breakpoints (600px, 900px, 1200px)
+          - Perfect: begin at one screen size and decrease the screen width until the screen breaks. Once it does, add a break point. Use this hand in hand with the good strategy. 
+          
+
+          Responding to Small Laptops
+          - This meta tag is crucial in matching the screen width. Add this tag in the head of the html:
+        **  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        - Create a new css file for queries.
+        - Not good to use pixels in media queries. Use em.
+        - In media queries, 1rem = 16px, meaning it is the default brower
+        - 1em = 1rem = 16px
+        - Only use em for the media max-width tag. Other than that, use rem. 
+        ex: 
+        @media (max-width: 84em) { //1334px
+        .hero {
+          max-width: 120rem;
+        }
+
+
+        Responding to landscape tablets
+        - 1200px / 16 = 75em 
+        - This is, typically, a break point for tablets.
+        - By setting the font-size in the html rem tag, we can simply change the font-size perecentage, which will change everything.
+        - After changing the font-size: ..%, when editing things in the media query, still change them with respect to the original font-size percentage.
+        
+        Responding to Tablets
+        - Rule of thumb: a media query should scale over 200-300 pixels 
+        
+
+        Building a mobile navigation
+        - In CSS, we can select based off name. For example, 
+          .icon-mobile-nav[name="close-outline"] {
+            display: none;
+          }
+
+        - Using display:none; does not allow transitions. 
+        - For basing things on javascript, we can apply multiple classes. 
+        - This is how to first hide properly and unhide
+
+         1) Hide the element visablly 
+        opacity: 0;
+
+        2) Make it unaccessible to mouse and keyboard 
+        pointer-events: none;
+
+        3) Hide it from screen readers 
+            visibility: hidden;
+        
+
+          .nav-open .main-nav {
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+          }
+        
+        - Use overlow-x: hidden for the items like a drop down menu, when wanting to create a transition. 
+        - For the transition property, it has 3 property: what to transition, the time, and how it looks.
+        ex:   transition: all 0.5s ease-in;
+        - creating grids with 6 columns are helpful
+
 
         
 
@@ -1244,20 +1329,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-        // WANT TO ADD A TRANSTION HOVER FEATURE FOR THE LINKS ON THE WEBPAGE. 
-        // CONVERT IT ALL INTO REM
-        // ADD A HELPER CLASS FEATURE / REUSABLE COMPONENTS
+        -
 
 
           
